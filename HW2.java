@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /*
  * ID: TODO: b0544206
- * Name: TODO: 曾斯煒
+ * Name: TODO: �����
  * Try to write some comments for your codes (methods, 15 points)
  */
 public class HW2 {
@@ -23,9 +23,9 @@ public class HW2 {
 		deck.printDeck();
 
 		if (isAllCardsCorrect(deck.getAllCards(), nDeck)) {
-			System.out.println("Well done!");
+			System.out.println("幹的好");
 		} else {
-			System.out.println("Error, please check your sourse code");
+			System.out.println("失敗，請檢查手牌");
 		}
 	}
 
@@ -83,7 +83,9 @@ class Deck {
 		// cards.add(card);
 		// Sample code end
 		for (int i = 1; i <= nDeck; i++) {
+			
 			for (int x = 1; x <= 4; x++) {
+				
 				for (int y = 1; y <= 13; y++) {
 					Card card = new Card(x, y);
 					cards.add(card);
@@ -98,8 +100,8 @@ class Deck {
 		// Hint: print all items in ArrayList<Card> cards,
 		// TODO: please implement and reuse printCard method in Card class (5
 		// points)
-for(int i = 0;i < cards.size();i++){
-	cards.get(i).printCard();
+for(int n = 0;n < cards.size();n++){
+	cards.get(n).printCard();
 }
 	}
 
@@ -116,9 +118,9 @@ class Card {
 						// Spades=4
 	private int rank; // 1~13
 
-	public Card(int s, int r) {
-		suit = s;
-		rank = r;
+	public Card(int y, int k) {
+		suit = y;
+		rank = k;
 	}
 
 	// TODO: 1. Please implement the printCard method (20 points, 10 for suit,
@@ -130,24 +132,24 @@ class Card {
 		switch (suit) {
 		case 1:
 			if (rank == 1)
-				System.out.println("Clubs "+"Ace");
+				System.out.println("梅花 "+"Ace");
 			else
-				System.out.println("Clubs "+rank);
+				System.out.println("梅花 "+rank);
 		case 2:
 			if (rank == 1)
-				System.out.println("Diamonds "+"Ace");
+				System.out.println("方塊 "+"Ace");
 			else
-				System.out.println("Diamonds "+rank);
+				System.out.println("方塊 "+rank);
 		case 3:
 			if (rank == 1)
-				System.out.println("Hearts "+"Ace");
+				System.out.println("紅心 "+"Ace");
 			else
-				System.out.println("Hearts "+rank);
+				System.out.println("紅心 "+rank);
 		case 4:
 			if (rank == 1)
-				System.out.println("Spades "+"Ace");
+				System.out.println("黑桃 "+"Ace");
 			else
-				System.out.println("Spades "+rank);
+				System.out.println("黑桃 "+rank);
 		}
 		
 			
